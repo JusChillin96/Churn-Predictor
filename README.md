@@ -21,7 +21,7 @@ The dataset is obtained from [Kaggle: Telco Customer Churn](https://www.kaggle.c
 ### 1. Handling Imbalanced Data
 Only 26% of customers churned. A standard model was biased towards the majority class (Recall ~52%).
 *   **Solution:** I implemented **Weighted XGBoost** (`scale_pos_weight`), telling the algorithm to penalize missing a churner 3x more than missing a non-churner.
-*   **Result:** Recall improved to **~80%**, capturing the majority of at-risk customers.
+*   **Result:** Recall improved to **~70%**, capturing the majority of at-risk customers.
 
 ### 2. Feature Importance Analysis
 Using XGBoost's built-in importance metric, I identified the top drivers of churn:
